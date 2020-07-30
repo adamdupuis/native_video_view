@@ -227,8 +227,8 @@ class NativeVideoViewController(private val id: Int,
 
     override fun onPrepared(mediaPlayer: MediaPlayer?) {
         if (playerState == PlayerState.PLAY_WHEN_READY)
-            mediaPlayer!!.setLooping(true)
             this.startPlayback()
+            mediaPlayer!!.setLooping(true)
         else
             notifyPlayerPrepared(mediaPlayer)
     }
